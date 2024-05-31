@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    id("kotlin-parcelize")
 }
 
 android {
@@ -63,8 +64,10 @@ dependencies {
     //Image loading
     implementation(libs.coil.compose)
 
-    implementation(libs.material3)
+    // Navigation
+    implementation(libs.androidx.navigation.compose)
 
+    implementation(libs.material3)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
